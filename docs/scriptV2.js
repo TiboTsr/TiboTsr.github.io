@@ -3,31 +3,31 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
 window.addEventListener('load', function () {
-    if (window.innerWidth <= 2000) {
+    if (window.innerWidth <= 1200) {
         var popup = document.getElementById('popup');
-        popup.style.display = 'block'; 
+        popup.style.display = 'block';
 
         var fermerPopup = document.getElementById('fermerPopup');
         fermerPopup.addEventListener('click', function () {
-            popup.style.display = 'none'; 
+            popup.style.display = 'none';
         });
     }
 });
 
 function AffichePopupen() {
-  // Récupérer la référence du popup
-  var popupen = document.getElementById("popupen");
+    // Récupérer la référence du popup
+    var popupen = document.getElementById("popupen");
 
-  // Afficher le popup
-  popupen.style.display = "block";
+    // Afficher le popup
+    popupen.style.display = "block";
 }
 
 function fermerPopup() {
-  // Récupérer la référence du popup
-  var popupen = document.getElementById("popupen");
+    // Récupérer la référence du popup
+    var popupen = document.getElementById("popupen");
 
-  // Fermer le popup
-  popupen.style.display = "none";
+    // Fermer le popup
+    popupen.style.display = "none";
 }
 // Code pour la section "Accueil"
 window.addEventListener('scroll', function () {
@@ -92,12 +92,12 @@ var sections = document.querySelectorAll('section');
 // Fonction pour activer/désactiver les classes "active"
 function updateActiveSection() {
     var scrollTop = window.scrollY;
-    
-    sections.forEach(function(section, index) {
+
+    sections.forEach(function (section, index) {
         var sectionTop = section.offsetTop;
         var sectionBottom = sectionTop + section.offsetHeight;
         var navbarLink = navbarLinks[index]; // Lien correspondant à la section
-        
+
         if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
             navbarLink.classList.add('active');
         } else {
@@ -107,7 +107,7 @@ function updateActiveSection() {
 }
 
 window.addEventListener('scroll', updateActiveSection);
-window.addEventListener('load', updateActiveSection); 
+window.addEventListener('load', updateActiveSection);
 
 document.getElementById("lang-fr").addEventListener("click", function () {
     document.querySelector(".header-fr").style.display = "flex";
@@ -127,3 +127,36 @@ document.getElementById("lang-en").addEventListener("click", function () {
     document.querySelector(".header-en").style.display = "flex";
     //document.querySelector(".home-en").style.display = "flex";
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.projet img');
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+    document.body.appendChild(lightbox);
+  
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        if (!img.classList.contains('no-lightbox')) {
+          lightbox.innerHTML = '';
+          const cloneImg = img.cloneNode(true);
+          
+          // Définir la largeur de l'image en fonction du facteur (3 dans cet exemple)
+          const newWidth = img.width * 2;
+          cloneImg.style.width = `${newWidth}px`;
+  
+          // Calculer la nouvelle hauteur en maintenant le rapport d'aspect
+          const aspectRatio = img.width / img.height;
+          const newHeight = newWidth / aspectRatio;
+          cloneImg.style.height = `${newHeight}px`;
+  
+          lightbox.appendChild(cloneImg);
+          lightbox.style.display = 'flex';
+        }
+      });
+    });
+  
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  });
+  
