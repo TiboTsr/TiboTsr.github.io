@@ -1,2 +1,3 @@
 # Accès au site
-(cliquez ici)[tibotsr.github.io]
+
+<a href="tibotsr.github.io">Cliquez ici</a>
