@@ -112,36 +112,37 @@ document.getElementById("lang-en").addEventListener("click", function () {
     document.querySelector(".header-en").style.display = "flex";
     //document.querySelector(".home-en").style.display = "flex";
 })
-
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.projet img');
     const lightbox = document.createElement('div');
     lightbox.classList.add('lightbox');
     document.body.appendChild(lightbox);
-  
+
+    const header = document.querySelector('header');
+
     images.forEach(img => {
-      img.addEventListener('click', () => {
-        if (!img.classList.contains('no-lightbox')) {
-          lightbox.innerHTML = '';
-          const cloneImg = img.cloneNode(true);
-          
-          // Définir la largeur de l'image en fonction du facteur (3 dans cet exemple)
-          const newWidth = img.width * 2;
-          cloneImg.style.width = `${newWidth}px`;
-  
-          // Calculer la nouvelle hauteur en maintenant le rapport d'aspect
-          const aspectRatio = img.width / img.height;
-          const newHeight = newWidth / aspectRatio;
-          cloneImg.style.height = `${newHeight}px`;
-  
-          lightbox.appendChild(cloneImg);
-          lightbox.style.display = 'flex';
-        }
-      });
+        img.addEventListener('click', () => {
+            if (!img.classList.contains('no-lightbox')) {
+                lightbox.innerHTML = '';
+                const cloneImg = img.cloneNode(true);
+
+                const newWidth = img.width * 1.9;
+                cloneImg.style.width = `${newWidth}px`;
+
+                const aspectRatio = img.width / img.height;
+                const newHeight = newWidth / aspectRatio;
+                cloneImg.style.height = `${newHeight}px`;
+
+                lightbox.appendChild(cloneImg);
+                lightbox.style.display = 'flex';
+
+                header.style.display = 'none';
+            }
+        });
     });
-  
+
     lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
+        lightbox.style.display = 'none';
+        header.style.display = 'flex';
     });
-  });
-  
+});

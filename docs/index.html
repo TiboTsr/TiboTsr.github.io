@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Tibo Tessier</title>
@@ -10,14 +10,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="./img/logo1.png">
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-02S8F983SK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-02S8F983SK');
-</script>
 <body>
   <header class="header" style="display: flex;">
     <a href="index.html" class="logo" style="color:  #ededed;">Tibo.T</a>
@@ -31,8 +24,16 @@
     </nav>
   </header>
   <div id="language-buttons" class="fixed-buttons">
-    <a href="./index.html"><button id="lang-fr" class="language-button"><img src="./img/FR.png"></button></a>
-    <a href="./indexen.html"><button id="lang-en" class="language-button"><img src="./img/EN.png"></button></a>
+    <a href="./index.html">
+      <button id="lang-fr" class="language-button">
+        <img src="./img/FR.png" alt="Français">
+      </button>
+    </a>
+    <a href="./indexen.html">
+      <button id="lang-en" class="language-button">
+        <img src="./img/EN.png" alt="English">
+      </button>
+    </a>
   </div>
   <div id="popup" class="popup">
     <p>⚠ La page n'est pas encore totalement développée et risque de présenter des bugs pour ce type
@@ -66,7 +67,7 @@
     <h2 class="heading">Ma Présentation</h2>
 
     <div class="about-img">
-      <img src="./img/user.png">
+      <img src="./img/user.png" alt="Photo de profil">
     </div>
 
     <div class="about-content">
@@ -118,13 +119,10 @@
         des sujets liés à l'informatique 👨‍💻
         à l'aide de <a href="#contact">cette page</a>.</p>
 
-      <!--<div class="btn-box btns">
-                <a href="#" class="btn">Voir Plus</a>
-            </div>-->
+
     </div>
   </section>
 
-  </section>
   <!--Section Compétences-->
   <section class="skills" id="compétences" style="display: block;">
     <div id="competences">‎</div>
@@ -156,7 +154,7 @@
               </div>
 
               <div class="progression">
-                <h3>SQL<img src="./img/sql.png" width="5%"><span style="margin-left: auto;">15%</span></h3>
+                <h3>SQL<img src="./img/sql.png" width="55" alt="logo SQL"><span style="margin-left: auto;">15%</span></h3>
                 <div class="bar"><span style="width: 15%;"></span></div>
               </div>
 
@@ -172,13 +170,13 @@
 
           <div class="tableau" style="padding-top: 1rem;">
             <div class="skills-content">
-              <h3 style="font-size: 15px" align="center">En dehors des languages de programmation que je suis déjà
+              <h3 style="font-size: 15px">En dehors des languages de programmation que je suis déjà
                 entrain d'expérimenter, j'aimerais me lancer dans l'apprentisage des languages de programmation
                 suivants: </h3>
               <ul style="list-style: none; line-height: 30px; ;">
-                <li>Approfondir mes bases en JavaScript<i class='bx bxl-javascript'
+                <li>• Approfondir mes bases en JavaScript<i class='bx bxl-javascript'
                     style="color: rgb(255, 217, 0); font-size: 30px;"></i></li>
-                <li>Commencer à apprendre le C/C++<i class='bx bxl-c-plus-plus'
+                <li>• Commencer à apprendre le C/C++<i class='bx bxl-c-plus-plus'
                     style="color: rgb(0, 68, 255); font-size: 30px;"></i></li>
               </ul>
             </div>
@@ -188,7 +186,7 @@
     </div>
   </section>
 
-  <section class="projets-fr" id="projet" style="display: flex; ">
+  <section class="projets" id="projet" style="display: flex; ">
     <h3 class="title" style="padding-top: 20px;">Mes projets :</h3>
 
     <div class="tableau" style="padding-top: 1rem;">
@@ -209,15 +207,15 @@
           </ul>
 
           <p>Pour consulter le résultat final du projet, cliquez <a href="https://tibotsr.github.io/Site-tesla/"
-              target="_blank">ici</a>.</p>
+              target="_blank">ici<i class='bx bx-link-external'></i></a>.</p>
 
           <p>Vous pouvez consulter le code source complet du site directement sur mon <a
-              href="https://github.com/TiboTsr" target="_blank">GitHub</a> ou en cliquant sur le répertoire GitHub
+              href="https://github.com/TiboTsr" target="_blank">GitHub<i class='bx bx-link-external'></i></a> ou en cliquant sur le répertoire GitHub
             si-dessous.</p>
           <a href="https://github.com/TiboTsr/website-tesla-nsi/tree/main" target="_blank"><img
-              src="./img/tesla_repositories.PNG" class="no-lightbox" style="border-radius: 15px; width: auto;"></a>
+              src="./img/tesla_repositories.PNG" alt="Repertoire GitHub du projet" class="no-lightbox" style="border-radius: 15px; width: auto;"></a>
           <div style="position: relative; text-align: center;">
-            <img src="./img/accueil.PNG" style="width: 40%; margin-top: 20px;" alt="Page d'accueil du site">
+            <img src="./img/accueil.PNG" alt="Page d'accueil du site" style="width: 40%; margin-top: 20px;">
             <p style="margin-top: 15px;">Voici un aperçu de la page d'accueil du site (cliquez sur l'image pour
               agrandir)</p>
           </div>
@@ -242,7 +240,7 @@
           </ul>
 
           <p>Pour télécharger la dernière version de l'outil, rendez-vous sur la page des <a
-              href="https://github.com/TiboTsr/generateur-QRcode/releases" target="_blank">versions disponibles</a>.</p>
+              href="https://github.com/TiboTsr/generateur-QRcode/releases" target="_blank">versions disponibles<i class='bx bx-link-external'></i></a>.</p>
 
           <h5 style="text-decoration: underline;">Nouveautés de la version 7</h5>
           <ul style="list-style: none; line-height: 25px; padding-left: 0;">
@@ -254,15 +252,14 @@
           </ul>
 
           <p>Explorez les différents fichiers du générateur de QR Code en visitant <a
-              href="https://github.com/TiboTsr/generateur-QRcode" target="_blank">ma page GitHub</a>.</p>
+              href="https://github.com/TiboTsr/generateur-QRcode" target="_blank">ma page GitHub<i class='bx bx-link-external'></i></a>.</p>
 
           <a href="https://github.com/TiboTsr/generateur-QRcode" target="_blank"><img
-              src="./img/gen_qr_repositories.PNG" class="no-lightbox" style="border-radius: 15px;"></a>
+              src="./img/gen_qr_repositories.PNG" alt="Repertoire GitHub du projet" class="no-lightbox" style="border-radius: 15px;"></a>
           <div style="position: relative; text-align: center;">
             <p style="margin-top: 15px;">Voici pour l'instant la seule interface utilisateur (utilisé avec le command
               prompt) utilisable avec l'executable : </p>
-            <img src="./img/qrcode_utilisation.PNG" class="no-lightbox" style="width: 90%; margin-top: 20px;"
-              alt="Aperçu de la page d'accueil">
+            <img src="./img/qrcode_utilisation.PNG" alt="Aperçu de la page d'accueil" class="no-lightbox" style="width: 90%; margin-top: 20px;">
             <p style="margin-top: 15px;">Le fichier est directement enregistré dans le dossier téléchargement de votre
               ordinateur.</p>
           </div>
@@ -280,12 +277,11 @@
           <p>Seule contrainte pour le moment, l'utilisateur doit saisir une clé API pour utiliser l'outil</p>
           <h4>Voici un visuel du résultat provisoire du projet :</h4>
           <p>(Cliquez sur les images pour agrandir)</p>
-          <img src="./img/meteo_accueil.PNG" width="50%">
-          <img src="./img/meteo_page.PNG" width="40%">
+          <img src="./img/meteo_accueil.PNG" alt="Page d'accueil de l'application météo" width="580">
+          <img src="./img/meteo_page.PNG" alt="Exemple d'utilisation de l'application météo" width="470">
           <h4><a href="https://github.com/tibotsr" target="_blank"
               style="text-decoration: underline; font-size: 15px;"></a>Vous pourrez egalement retrouver le code source
-            de ce
-            site directement sur GitHub</h4>
+            de ce site directement sur GitHub<i class='bx bx-link-external'></i></h4>
         </div>
       </div>
     </div>
@@ -303,9 +299,9 @@
           <li><i class='bx bx-mail-send'></i> Envoyez-moi un e-mail à : <a href="mailto:tibo.tessier@gmail.com"
               target="_blank">tibo.tessier@gmail.com</a></li>
           <li><i class='bx bxl-discord'></i> Retrouvez-moi sur Discord : <a
-              href="https://discord.com/users/476420730989445130" target="_blank">TiboTsr</a></span></li>
+              href="https://discord.com/users/476420730989445130" target="_blank">TiboTsr<i class='bx bx-link-external'></i></a></li>
           <li><i class='bx bxl-github'></i> Retrouver moi sur GitHub également : <a
-              href="https://www.github.com/tibotsr" target="_blank">TiboTsr</a></li>
+              href="https://www.github.com/tibotsr" target="_blank">TiboTsr<i class='bx bx-link-external'></i></a></li>
         </ul>
       </div>
 
@@ -316,11 +312,11 @@
         <a href="https://snapchat.com/add/tibo_tsr11" target="_blank"><i class='bx bxl-snapchat bx-tada'></i></a>
       </div>
       <div class="count">
-        <p>Vous étiez le <img src="http://www.mon-compteur.fr/html_c01genv2-240441-3" border="0"
-            style="padding: 0; padding-top: 7px;" /></a> eme visiteur.</p>
+        <p>Vous étiez le <img src="http://www.mon-compteur.fr/html_c01genv2-240441-3" alt="Compteur de visites"
+            style="padding: 0; padding-top: 7px;"> ème visiteur.</p>
         <p style="text-decoration: solid; padding-bottom: 40px; padding-top: 24px ;">Merci de votre visite :)</p>
       </div>
-      <div class="update"><strong>Dernière mise à jour du site : 27/03/2024</strong></div>
+      <div class="update"><strong>Dernière mise à jour du site : 28/03/2024</strong></div>
     </div>
   </section>
   <footer style="text-align: center; background-color: rgb(22, 22, 22);">
@@ -328,4 +324,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
