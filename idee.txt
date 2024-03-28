@@ -1,0 +1,1 @@
+rester dans la meme partie de la page quand on change de langue
