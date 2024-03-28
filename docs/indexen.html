@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tibo Tessier's Portfolio</title>
-    <link rel="stylesheet" href="styleFR.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./img/logo1.png">
 </head>
@@ -24,17 +24,17 @@
         <a href="#home" class="logo" style="color:  #ededed;">Tibo.T</a>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about" class="">About Me</a>
-            <a href="#skills" class="">Skills</a>
-            <a href="#projects" class="">Projects</a>
+            <a href="#accueil" class="active">Home</a>
+            <a href="#presentation" class="">About Me</a>
+            <a href="#competences" class="">Skills</a>
+            <a href="#projet" class="">Projects</a>
             <a href="#contact" class="">Contact</a>
         </nav>
     </header>
     <div id="language-buttons" class="fixed-buttons">
-        <button id="lang-fr" class="language-button"><img src="./img/FR.png"></button>
-        <button id="lang-en" class="language-button"><img src="./img/EN.png" onclick="ShowPopupEn()"></button>
-    </div>
+        <a href="./index.html"><button id="lang-fr" class="language-button"><img src="./img/FR.png"></button></a>
+        <a href="./indexen.html"><button id="lang-en" class="language-button"><img src="./img/EN.png"></button></a>
+      </div>
     <div id="popup" class="popup">
         <p>⚠ The page is not yet fully developed and may have bugs for this type of device. ⚠<br>
             ⚠ The page is currently under construction, please be patient ⚠ <br>
@@ -42,16 +42,12 @@
             ⚠ Thank you for your patience ⚠</p>
         <button id="closePopup">Close</button>
     </div>
-    <div id="popupen" class="popupen">
-        <p>English language is not yet supported, but it's coming soon! <br>
-            La langue anglaise n'est pas encore prise en charge, mais elle arrive bientôt! </p>
-        <button id="closePopup" onclick="closePopup()">Close</button>
-    </div>
     <section class="home" id="accueil">
         <div class="home-content" style="display: block;">
             <h1>Hi, I'm Tibo Tessier</h1>
             <h3>Welcome to my portfolio</h3>
-            <p>Feel free to check out my projects page or contact me to learn more about my projects or discuss your
+            <p>Feel free to check out my projects page or contact me to learn more<br>
+                about my projects or discuss your
                 ideas.</p>
             <div class="btn-box">
                 <a href="#projects">My Projects</a>
@@ -334,7 +330,7 @@
     <footer style="text-align: center; background-color: rgb(22, 22, 22);">
         <p>&copy; 2024 Tessier Tibo. All rights reserved.</p>
     </footer>
-    <script src="scriptV2.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

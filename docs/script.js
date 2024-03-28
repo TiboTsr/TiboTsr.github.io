@@ -14,21 +14,6 @@ window.addEventListener('load', function () {
     }
 });
 
-function AffichePopupen() {
-    // Récupérer la référence du popup
-    var popupen = document.getElementById("popupen");
-
-    // Afficher le popup
-    popupen.style.display = "block";
-}
-
-function fermerPopup() {
-    // Récupérer la référence du popup
-    var popupen = document.getElementById("popupen");
-
-    // Fermer le popup
-    popupen.style.display = "none";
-}
 // Code pour la section "Accueil"
 window.addEventListener('scroll', function () {
     var homeSection = document.querySelector('.home');

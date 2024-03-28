@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Tibo Tessier</title>
-  <link rel="stylesheet" href="styleFR.css">
+  <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="./img/logo1.png">
 </head>
@@ -31,8 +31,8 @@
     </nav>
   </header>
   <div id="language-buttons" class="fixed-buttons">
-    <button id="lang-fr" class="language-button"><img src="./img/FR.png"></button>
-    <button id="lang-en" class="language-button"><img src="./img/EN.png" onclick="AffichePopupen()"></button>
+    <a href="./index.html"><button id="lang-fr" class="language-button"><img src="./img/FR.png"></button></a>
+    <a href="./indexen.html"><button id="lang-en" class="language-button"><img src="./img/EN.png"></button></a>
   </div>
   <div id="popup" class="popup">
     <p>⚠ La page n'est pas encore totalement développée et risque de présenter des bugs pour ce type
@@ -41,11 +41,6 @@
       ⚠ Je travaille activement afin de prendre en charge tous types d'appareils ⚠<br>
       ⚠ Merci de votre patience ⚠</p>
     <button id="fermerPopup">Fermer</button>
-  </div>
-  <div id="popupen" class="popupen">
-    <p>La langue anglaise n'est pas encore prise en charge, mais elle arrive bientôt ! <br>
-      English is not yet supported, but it's coming soon! </p>
-    <button id="fermerPopup" onclick="fermerPopup()">Fermer / Close</button>
   </div>
   <section class="home" id="accueil">
     <div class="home-content" style="display: block;">
@@ -331,7 +326,7 @@
   <footer style="text-align: center; background-color: rgb(22, 22, 22);">
     <p>&copy; 2024 Tessier Tibo. Tous droits réservés.</p>
   </footer>
-  <script src="scriptV2.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
