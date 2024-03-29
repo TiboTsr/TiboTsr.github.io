@@ -146,3 +146,47 @@ document.addEventListener('DOMContentLoaded', function () {
         header.style.display = 'flex';
     });
 });
+
+function afficherLightbox() {
+    document.getElementById('lightbox').style.display = 'block';
+    document.querySelector('header').style.display = 'none';
+}
+
+function fermerLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.querySelector('header').style.display = 'flex';
+
+}
+
+document.getElementById('btnMisesAJour').addEventListener('click', afficherLightbox);
+
+document.getElementsByClassName('close')[0].addEventListener('click', fermerLightbox);
+
+window.onclick = function (event) {
+    if (event.target == document.getElementById('lightbox')) {
+        fermerLightbox();
+    }
+}
+
+
+// Fonction pour récupérer et mettre à jour le nombre de visites
+function updateVisitsCount() {
+    // Vérifier si le compteur de visites est stocké dans le localStorage
+    if (localStorage.getItem('visits')) {
+        // Si oui, récupérer le nombre de visites et l'incrémenter
+        let visits = parseInt(localStorage.getItem('visits'));
+        visits++;
+        // Mettre à jour le nombre de visites dans le localStorage
+        localStorage.setItem('visits', visits);
+        // Mettre à jour le texte affichant le nombre de visites sur la page
+        document.getElementById('visitsCount').textContent = visits;
+    } else {
+        // Si le compteur de visites n'existe pas, initialiser à 1 et enregistrer dans le localStorage
+        localStorage.setItem('visits', 1);
+        // Mettre à jour le texte affichant le nombre de visites sur la page
+        document.getElementById('visitsCount').textContent = 1;
+    }
+}
+
+// Appeler la fonction pour mettre à jour le nombre de visites lors du chargement de la page
+updateVisitsCount();
