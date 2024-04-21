@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
 // Code pour la section "Accueil"
 window.addEventListener('scroll', function () {
     var homeSection = document.querySelector('.home');
-    var navbarLink = document.querySelector('.navbar a.active'); // Sélectionnez le lien actif
+    var navbarLink = document.querySelector('.navbar a.active'); 
 
     if (homeSection) {
         var homeTop = homeSection.offsetTop;
@@ -35,7 +35,7 @@ window.addEventListener('scroll', function () {
 // Code pour la section "Ma présentation"
 window.addEventListener('scroll', function () {
     var presentationSection = document.querySelector('.presentation');
-    var navbarLink = document.querySelector('.navbar a.active'); // Sélectionnez le lien actif
+    var navbarLink = document.querySelector('.navbar a.active');
 
     if (presentationSection) {
         var presentationTop = presentationSection.offsetTop;
@@ -53,7 +53,7 @@ window.addEventListener('scroll', function () {
 // Code pour la section "Mes compétences"
 window.addEventListener('scroll', function () {
     var competencesSection = document.querySelector('.skills');
-    var navbarLink = document.querySelector('.navbar a.active'); // Sélectionnez le lien actif
+    var navbarLink = document.querySelector('.navbar a.active');
 
     if (competencesSection) {
         var competencesTop = competencesSection.offsetTop;
@@ -167,26 +167,3 @@ window.onclick = function (event) {
         fermerLightbox();
     }
 }
-
-
-// Fonction pour récupérer et mettre à jour le nombre de visites
-function updateVisitsCount() {
-    // Vérifier si le compteur de visites est stocké dans le localStorage
-    if (localStorage.getItem('visits')) {
-        // Si oui, récupérer le nombre de visites et l'incrémenter
-        let visits = parseInt(localStorage.getItem('visits'));
-        visits++;
-        // Mettre à jour le nombre de visites dans le localStorage
-        localStorage.setItem('visits', visits);
-        // Mettre à jour le texte affichant le nombre de visites sur la page
-        document.getElementById('visitsCount').textContent = visits;
-    } else {
-        // Si le compteur de visites n'existe pas, initialiser à 1 et enregistrer dans le localStorage
-        localStorage.setItem('visits', 1);
-        // Mettre à jour le texte affichant le nombre de visites sur la page
-        document.getElementById('visitsCount').textContent = 1;
-    }
-}
-
-// Appeler la fonction pour mettre à jour le nombre de visites lors du chargement de la page
-updateVisitsCount();
